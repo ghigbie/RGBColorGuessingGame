@@ -10,14 +10,17 @@
 
 .container{
 	background: #000000;
-
 }
 
 .row{
-	max-width: 33%;
+	max-width: 40%;
+	background: #000000;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .square{
 	background: #ffffff;
 	color: #000000;
+	margin: 3px;
 }
