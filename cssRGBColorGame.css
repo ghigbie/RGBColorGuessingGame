@@ -13,7 +13,7 @@ body{
 	background: #ffffff;
 }
 
-.container{
+#container{
 	max-width: 600px;
 	margin: 0 auto;
 	background: #232323;
@@ -22,6 +22,10 @@ body{
 .row{
 	margin-right: auto;
 	margin-left: auto;
+}
+
+h1 {
+	color: #ffffff;
 }
 
 .square{
