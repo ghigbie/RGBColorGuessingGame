@@ -1,5 +1,5 @@
 /*file created in command line*/
-.body{
+body{
 	background-color: #232323;
 }
 
@@ -15,12 +15,10 @@
 .container{
 	max-width: 600px;
 	margin: 0 auto;
-	background: #000000;
+	background: #232323;
 }
 
 .row{
-	max-width: 40%;
-	background: #000000;
 	margin-right: auto;
 	margin-left: auto;
 }
