@@ -14,6 +14,7 @@ var squares = document.querySelectorAll(".square");
 var pickedColor = colors[3];
 var colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.querySelector("#message");
+let h1 = document.querySelector("h1");
 
 colorDisplay.textContent = pickedColor;
 
@@ -25,6 +26,7 @@ for(var i = 0; i < squares.length; i++){
 		if(clickedColor === pickedColor){
 			alert(`Correct! You clicked on ${pickedColor}!`);
 			messageDisplay.textContent = "Correct! Awesome Eye!"
+			changeToWinningColor(clickedColor);
 		}else{
 			alert(`Try again. You clicked color ${clickedColor}`);
 			this.style.background = "#232323";
@@ -32,4 +34,11 @@ for(var i = 0; i < squares.length; i++){
 		}
 		//grab color of clicked square
 	});
+}
+
+function changeToWinningColor(color){
+	for(let a = 0; a < squares.length; a++){
+		squares[a].style.background = color;
+	}
+	h1.style.background = color;
 }
