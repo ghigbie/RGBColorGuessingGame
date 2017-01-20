@@ -11,7 +11,7 @@ var colors = [
 ];
 
 var squares = document.querySelectorAll(".square");
-var pickedColor = colors[3];
+var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.querySelector("#message");
 let h1 = document.querySelector("h1");
@@ -41,4 +41,9 @@ function changeToWinningColor(color){
 		squares[a].style.background = color;
 	}
 	h1.style.background = color;
+}
+
+function pickColor(){
+	var random = Math.floor(Math.random() * colors.length);
+	return colors[random];
 }
