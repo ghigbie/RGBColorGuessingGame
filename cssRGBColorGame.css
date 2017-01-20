@@ -10,4 +10,14 @@
 
 .container{
 	background: #000000;
+
+}
+
+.row{
+	max-width: 33%;
+}
+
+.square{
+	background: #ffffff;
+	color: #000000;
 }
