@@ -1,3 +1,16 @@
 //this file was created in the command line
 //alert("JS file Connected!");
+var colors = [
+"rgb(255, 0,  0)",
+"rgb(255, 255,  0)",
+"rgb(0, 255,  0)",
+"rgb(0, 255,  255)",
+"rgb(0, 0,  255)",
+"rgb(255, 0,  0255",
+];
 
+var sqaures = document.querySelectorAll("square");
+
+for(var i = 0; i < squares.length; i++){
+	squares[i].style.background = colors[i];
+}
