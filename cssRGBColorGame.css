@@ -34,3 +34,11 @@ h1 {
 	float: left;
 	margin: 1.66%;
 }
+
+.fadeOut{
+	background: #232323;
+}
+
+#message{
+	color: #ffffff;
+}
