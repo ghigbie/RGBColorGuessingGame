@@ -2,13 +2,13 @@
 //alert("JS file Connected!");
 
 var colors = [
-"rgb(255, 0,  0)",
-"rgb(255, 255,  0)",
-"rgb(0, 255,  0)",
-"rgb(0, 255,  255)",
-"rgb(0, 0,  255)",
-"rgb(255, 0,  0255)",
-]
+"rgb(255, 0, 0)",
+"rgb(255, 255, 0)",
+"rgb(0, 255, 0)",
+"rgb(0, 255, 255)",
+"rgb(0, 0, 255)",
+"rgb(255, 0, 255)",
+];
 
 var squares = document.querySelectorAll(".square");
 var pickedColor = colors[3];
@@ -19,6 +19,13 @@ colorDisplay.textContent = pickedColor;
 for(var i = 0; i < squares.length; i++){
 	squares[i].style.background = colors[i];
 	squares[i].addEventListener("click", function(){
-		alert(`You clicked a square.`);
+		var clickedColor = this.style.background;
+
+		if(clickedColor === pickedColor){
+			alert(`Correct! You clicked on ${pickedColor}!`);
+		}else{
+			alert(`Try again. You clicked color ${clickedColor}`);
+		}
+		//grab color of clicked square
 	});
 }
