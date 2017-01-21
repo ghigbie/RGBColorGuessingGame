@@ -1,6 +1,6 @@
 //this file was created in the command line
 //alert("JS file Connected!");
-
+var isHard;
 var colors = generateRandomColors(6);
 
 var squares = document.querySelectorAll(".square");
