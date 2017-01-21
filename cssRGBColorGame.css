@@ -42,3 +42,9 @@ h1 {
 #message{
 	color: #ffffff;
 }
+
+#stripe{
+	background: #ffffff;
+	height 30px;
+	text-align: center;
+}
