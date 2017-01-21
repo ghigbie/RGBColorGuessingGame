@@ -47,3 +47,17 @@ function pickColor(){
 	var random = Math.floor(Math.random() * colors.length);
 	return colors[random];
 }
+
+function generateRandomColors(numberOfColors){
+	var red;
+	var green;
+	var blue;
+	var numberOfColorsArray
+	for(let i = 0, i < numberOfColors; i++){
+		red = Math.floor(Math.random() * 255);
+		green = Math.floor(Math.random() *255);
+		blue = Math.floor(Math.random() *255);
+		numberOfColorsArray.push(`rgb(${red}, ${green}, ${blue}`);
+	}
+	
+}
