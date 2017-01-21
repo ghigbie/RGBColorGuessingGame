@@ -59,5 +59,6 @@ function generateRandomColors(numberOfColors){
 		blue = Math.floor(Math.random() *255);
 		numberOfColorsArray.push(`rgb(${red}, ${green}, ${blue}`);
 	}
+	return numberOfColorsArray;
 	
 }
