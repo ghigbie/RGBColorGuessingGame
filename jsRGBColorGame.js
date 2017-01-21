@@ -54,9 +54,9 @@ function generateRandomColors(numberOfColors){
 	var blue;
 	var numberOfColorsArray
 	for(let i = 0, i < numberOfColors; i++){
-		red = Math.floor(Math.random() * 255);
-		green = Math.floor(Math.random() *255);
-		blue = Math.floor(Math.random() *255);
+		red = Math.floor(Math.random() * 256);
+		green = Math.floor(Math.random() * 256);
+		blue = Math.floor(Math.random() * 256);
 		numberOfColorsArray.push(`rgb(${red}, ${green}, ${blue}`);
 	}
 	return numberOfColorsArray;
