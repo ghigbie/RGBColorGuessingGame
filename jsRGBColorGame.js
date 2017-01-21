@@ -1,14 +1,7 @@
 //this file was created in the command line
 //alert("JS file Connected!");
 
-var colors = [
-"rgb(255, 0, 0)",
-"rgb(255, 255, 0)",
-"rgb(0, 255, 0)",
-"rgb(0, 255, 255)",
-"rgb(0, 0, 255)",
-"rgb(255, 0, 255)",
-];
+var colors = generateRandomColors(6);
 
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
@@ -52,12 +45,15 @@ function generateRandomColors(numberOfColors){
 	var red;
 	var green;
 	var blue;
-	var numberOfColorsArray
-	for(let i = 0, i < numberOfColors; i++){
+	var newColor;
+	var numberOfColorsArray = [];
+	for(let i = 0; i < numberOfColors; i++){
 		red = Math.floor(Math.random() * 256);
 		green = Math.floor(Math.random() * 256);
 		blue = Math.floor(Math.random() * 256);
-		numberOfColorsArray.push(`rgb(${red}, ${green}, ${blue}`);
+		//newColor = `rgb(${red}, ${green}, ${blue})`;
+		newColor = "rgb("+ red + ", "+ green + ", " + blue +")";
+		numberOfColorsArray.push(newColor);
 	}
 	return numberOfColorsArray;
 	
