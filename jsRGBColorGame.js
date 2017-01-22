@@ -13,11 +13,13 @@ let easyButton = document.querySelector("#easy");
 let hardButton = document.querySelector("#hard");
 
 easyButton.addEventListener("click", function(){
-	alert("Easy button was clicked");
+	easyButton.classList.add("selected");
+	hardButton.classList.remove("selected")
 });
 
 hardButton.addEventListener("click", function(){
-	alert("Hard button clicked");
+	hardButton.classList.add("selected");
+	easyButton.classList.remove("selected");
 });
 
 resetButton.addEventListener("click", function(){
