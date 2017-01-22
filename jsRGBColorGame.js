@@ -19,10 +19,10 @@ for(var i = 0; i < modeButtons.length; i++){
 		for(var a = 0; a< modeButtons.length; a++){ //this loop will remove all classes add to any buttons of the class
 			modeButtons[a].classList.remove("selected");
 		}
-		this.classList.add("selected");
-	});
+	this.classList.add("selected");
 	this.textContent === "Easy" ? numSquares = 3: numSquares = 6; //ternary operator - is the same as an if else statement
 	reset();
+	});
 }
 
 function reset(){
@@ -35,7 +35,7 @@ function reset(){
 		if(colors[i]){
 			squares[i].style.background = colors[i];
 		}else{
-			squares[i].display = "none";
+			squares[i].style.display = "none";
 		}
 	}
 	h1.style.background = "steelblue";
