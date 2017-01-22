@@ -21,7 +21,7 @@ for(var i = 0; i < modeButtons.length; i++){
 		}
 		this.classList.add("selected");
 	});
-	this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
+	this.textContent === "Easy" ? numSquares = 3: numSquares = 6; //ternary operator - is the same as an if else statement
 	reset();
 }
 
@@ -32,7 +32,11 @@ function reset(){
 	colorDisplay.textContent = pickedColor;
 	//change color of squares
 	for(var i = 0; i < squares.length; i++){
-		squares[i].style.background = colors[i];
+		if(colors[i]){
+			squares[i].style.background = colors[i];
+		}else{
+			squares[i].display = "none";
+		}
 	}
 	h1.style.background = "steelblue";
 	messageDisplay.textContent = "";
