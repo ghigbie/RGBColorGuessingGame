@@ -15,6 +15,9 @@ let hardButton = document.querySelector("#hard");
 easyButton.addEventListener("click", function(){
 	easyButton.classList.add("selected");
 	hardButton.classList.remove("selected")
+	color = generateRandomColors(3);
+	pickedColor = pickColor();
+	colorDisplay.textContent = pickedColor;
 });
 
 hardButton.addEventListener("click", function(){
