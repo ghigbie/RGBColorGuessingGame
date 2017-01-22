@@ -54,6 +54,8 @@ h1 {
 
 #message{
 	color: #000000;
+	display: inline-block;
+	width: 20%;
 }
 
 #stripe{
@@ -71,8 +73,15 @@ button{
 	color: steelblue;
 	letter-spacing: 1px;
 	font-size: inherit;
+	transition: all 2.0;
+}
+
+button:hover {
+	color: white;
+	background: steelblue;
 }
 
 .selected{
-	background: blue;
+	color: white;
+	background: steelblue;
 }
