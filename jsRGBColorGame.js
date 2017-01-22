@@ -64,12 +64,12 @@ for(var i = 0; i < squares.length; i++){
 		var clickedColor = this.style.background;
 
 		if(clickedColor === pickedColor){
-			alert(`Correct! You clicked on ${pickedColor}!`);
+			//alert(`Correct! You clicked on ${pickedColor}!`);
 			messageDisplay.textContent = "Correct! Awesome Eye!"
 			changeToWinningColor(clickedColor);
 			resetButton.textContent = "Play Again?"
 		}else{
-			alert(`Try again. You clicked color ${clickedColor}`);
+			//alert(`Try again. You clicked color ${clickedColor}`);
 			this.style.background = "#232323";
 			messageDisplay.textContent = "Try Again"; 
 		}
