@@ -63,8 +63,14 @@ h1 {
 }
 
 button{
-	border: 0;
+	border: none;
 	background: #ffffff;
+	text-transform: uppercase;
+	height: 100%;/*sets height to 100% of containing element*/
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
 }
 
 .selected{
