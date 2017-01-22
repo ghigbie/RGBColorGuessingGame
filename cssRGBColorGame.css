@@ -1,6 +1,7 @@
 /*file created in command line*/
 body{
 	background-color: #232323;
+	margin: 0;
 }
 
 .header{
@@ -28,6 +29,7 @@ h1 {
 	text-align: center;
 	color: #ffffff;
 	background: steelblue;
+	margin: 0;
 }
 
 .square{
