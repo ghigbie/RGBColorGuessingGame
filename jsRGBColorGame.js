@@ -22,11 +22,6 @@ for(var i = 0; i < modeButtons.length; i++){
 		this.classList.add("selected");
 	});
 	this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
-	if(this.textContent === "Easy"){
-		numSquares = 3;
-	}else{
-		numSquares = 6;
-	}
 	reset();
 }
 
