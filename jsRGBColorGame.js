@@ -11,7 +11,14 @@ let h1 = document.querySelector("h1");
 let resetButton = document.querySelector("#reset");
 
 resetButton.addEventListener("click", function(){
-	alert("Clicked reset button");
+	//generate all new colors
+	colors = generateRandomColors(6);
+	//pick a new random color from array
+	pickedColor = pickColor();
+	colorDisplay.textContent pickedColor;
+	//change color of squares
+
+	
 });
 
 colorDisplay.textContent = pickedColor;
