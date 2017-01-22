@@ -21,6 +21,27 @@ for(var i = 0; i < modeButtons.length; i++){
 		}
 		this.classList.add("selected");
 	});
+	this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
+	if(this.textContent === "Easy"){
+		numSquares = 3;
+	}else{
+		numSquares = 6;
+	}
+	reset();
+}
+
+function reset(){
+	colors = generateRandomColors(numSquares);
+	//pick a new random color from array
+	pickedColor = pickColor();
+	colorDisplay.textContent = pickedColor;
+	//change color of squares
+	for(var i = 0; i < squares.length; i++){
+		squares[i].style.background = colors[i];
+	}
+	h1.style.background = "steelblue";
+	messageDisplay.textContent = "";
+	resetButton.textContent = "New Colors";
 }
 
 // easyButton.addEventListener("click", function(){
