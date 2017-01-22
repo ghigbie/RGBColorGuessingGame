@@ -12,6 +12,13 @@ let resetButton = document.querySelector("#reset");
 let easyButton = document.querySelector("#easy");
 let hardButton = document.querySelector("#hard");
 let numSquares = 6;
+let modeButtons = document.querySelectorAll(".modeButtons");
+
+for(var i = 0; i < modeButtons.length; i++){
+	modeButtons[i].addEventListener("click", function(){
+
+	});
+}
 
 easyButton.addEventListener("click", function(){
 	numSquares = 3;
