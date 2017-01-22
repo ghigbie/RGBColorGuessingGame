@@ -13,6 +13,7 @@ let easyButton = document.querySelector("#easy");
 let hardButton = document.querySelector("#hard");
 
 easyButton.addEventListener("click", function(){
+	isHard = false;
 	easyButton.classList.add("selected");
 	hardButton.classList.remove("selected")
 	colors = generateRandomColors(3);
@@ -28,6 +29,7 @@ easyButton.addEventListener("click", function(){
 });
 
 hardButton.addEventListener("click", function(){
+	isHard = true;
 	hardButton.classList.add("selected");
 	easyButton.classList.remove("selected");
 	colors = generateRandomColors(6);
@@ -40,7 +42,11 @@ hardButton.addEventListener("click", function(){
 
 resetButton.addEventListener("click", function(){
 	//generate all new colors
-	colors = generateRandomColors(6);
+	if(!isHard){
+		colors = generateRandomColors(3);
+	}else{
+		colors = generateRandomColors(6);
+	}
 	//pick a new random color from array
 	pickedColor = pickColor();
 	colorDisplay.textContent = pickedColor;
