@@ -12,44 +12,47 @@ let resetButton = document.querySelector("#reset");
 let easyButton = document.querySelector("#easy");
 let hardButton = document.querySelector("#hard");
 let numSquares = 6;
-let modeButtons = document.querySelectorAll(".modeButtons");
+let modeButtons = document.querySelectorAll(".mode");
 
 for(var i = 0; i < modeButtons.length; i++){
 	modeButtons[i].addEventListener("click", function(){
-
+		for(var a = 0; a< modeButtons.length; a++){ //this loop will remove all classes add to any buttons of the class
+			modeButtons[a].classList.remove("selected");
+		}
+		this.classList.add("selected");
 	});
 }
 
-easyButton.addEventListener("click", function(){
-	numSquares = 3;
-	easyButton.classList.add("selected");
-	hardButton.classList.remove("selected")
-	colors = generateRandomColors(numSquares);
-	pickedColor = pickColor();
-	colorDisplay.textContent = pickedColor;
-	for(var i = 0; i < squares.length; i++){
-		if(colors[i]){ //if there is a next colors
-			squares[i].style.background = colors[i];
-		}else{
-			squares[i].style.display = "none";
-		}
-	}
-	messageDisplay.textContent = "";
-});
+// easyButton.addEventListener("click", function(){
+// 	numSquares = 3;
+// 	easyButton.classList.add("selected");
+// 	hardButton.classList.remove("selected")
+// 	colors = generateRandomColors(numSquares);
+// 	pickedColor = pickColor();
+// 	colorDisplay.textContent = pickedColor;
+// 	for(var i = 0; i < squares.length; i++){
+// 		if(colors[i]){ //if there is a next colors
+// 			squares[i].style.background = colors[i];
+// 		}else{
+// 			squares[i].style.display = "none";
+// 		}
+// 	}
+// 	messageDisplay.textContent = "";
+// });
 
-hardButton.addEventListener("click", function(){
-	numSquares = 6;
-	hardButton.classList.add("selected");
-	easyButton.classList.remove("selected");
-	colors = generateRandomColors(numSquares);
-	pickedColor = pickColor();
-	colorDisplay.textContent = pickedColor;
-	for(var i = 0; i < squares.length; i++){
-		squares[i].style.background = colors[i];
-		squares[i].style.display = "block";
-	}
-	messageDisplay.textContent = "";
-});
+// hardButton.addEventListener("click", function(){
+// 	numSquares = 6;
+// 	hardButton.classList.add("selected");
+// 	easyButton.classList.remove("selected");
+// 	colors = generateRandomColors(numSquares);
+// 	pickedColor = pickColor();
+// 	colorDisplay.textContent = pickedColor;
+// 	for(var i = 0; i < squares.length; i++){
+// 		squares[i].style.background = colors[i];
+// 		squares[i].style.display = "block";
+// 	}
+// 	messageDisplay.textContent = "";
+// });
 
 resetButton.addEventListener("click", function(){
 	//generate all new colors
