@@ -25,7 +25,9 @@ body{
 }
 
 h1 {
+	text-align: center;
 	color: #ffffff;
+	background: steelblue;
 }
 
 .square{
