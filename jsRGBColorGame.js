@@ -15,14 +15,27 @@ let hardButton = document.querySelector("#hard");
 easyButton.addEventListener("click", function(){
 	easyButton.classList.add("selected");
 	hardButton.classList.remove("selected")
-	color = generateRandomColors(3);
+	colors = generateRandomColors(3);
 	pickedColor = pickColor();
 	colorDisplay.textContent = pickedColor;
+	for(var i = 0; i < squares.length; i++){
+		if(colors[i]){ //if there is a next colors
+			squares[i].style.background = colors[i];
+		}else{
+			squares[i].style.display = "none";
+		}
+	}
 });
 
 hardButton.addEventListener("click", function(){
 	hardButton.classList.add("selected");
 	easyButton.classList.remove("selected");
+	colors = generateRandomColors(6);
+	pickedColor = pickColor();
+	colorDisplay.textContent = pickedColor;
+	for(var i = 0; i < squares.length; i++){
+		squares[i].style.background = "display";
+	}
 });
 
 resetButton.addEventListener("click", function(){
@@ -87,5 +100,4 @@ function generateRandomColors(numberOfColors){
 		numberOfColorsArray.push(newColor);
 	}
 	return numberOfColorsArray;
-	
 }
