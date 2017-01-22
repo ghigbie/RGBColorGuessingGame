@@ -40,11 +40,16 @@ h1 {
 }
 
 #message{
-	color: #ffffff;
+	color: #000000;
 }
 
 #stripe{
 	background: #ffffff;
-	height 30px;
+	height: 30px;
 	text-align: center;
+}
+
+button{
+	border: 0;
+	background: #ffffff;
 }

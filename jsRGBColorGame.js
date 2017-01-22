@@ -8,6 +8,11 @@ var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.querySelector("#message");
 let h1 = document.querySelector("h1");
+let resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener("click", function(){
+	alert("Clicked reset button");
+});
 
 colorDisplay.textContent = pickedColor;
 
