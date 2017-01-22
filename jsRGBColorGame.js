@@ -17,8 +17,10 @@ resetButton.addEventListener("click", function(){
 	pickedColor = pickColor();
 	colorDisplay.textContent pickedColor;
 	//change color of squares
+	for(var i = 0; i < squares.length; i++){
+		squares[i].style.background = colors[i];
+	}
 
-	
 });
 
 colorDisplay.textContent = pickedColor;
