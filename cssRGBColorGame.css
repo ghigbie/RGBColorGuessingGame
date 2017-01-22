@@ -31,6 +31,12 @@ h1 {
 	color: #ffffff;
 	background: steelblue;
 	margin: 0;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+#colorDisplay{
+	font-size: 200%;
 }
 
 .square{
