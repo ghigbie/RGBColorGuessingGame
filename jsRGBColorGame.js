@@ -24,7 +24,7 @@ function init(){
 		reset();
 		});
 	}
-
+	//the below code sets up the square listeners
 	for(var i = 0; i < squares.length; i++){
 	squares[i].style.background = colors[i];
 	squares[i].addEventListener("click", function(){
@@ -44,10 +44,10 @@ function init(){
 	});
 	colorDisplay.textContent = pickedColor;
 	}
-	reset();
+	reset();//reset function sets the color variables declared above
 }
 
-function reset(){
+function reset(){//sets the values of the color variables declared above
 	colors = generateRandomColors(numSquares);
 	//pick a new random color from array
 	pickedColor = pickColor();
