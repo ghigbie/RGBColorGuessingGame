@@ -14,16 +14,7 @@ let modeButtons = document.querySelectorAll(".mode");
 init();
 
 function init(){
-	for(var i = 0; i < modeButtons.length; i++){  //this touches both of the easy and difficult "mode" buttons
-		modeButtons[i].addEventListener("click", function(){
-			for(var a = 0; a< modeButtons.length; a++){ //this loop will remove all classes add to any buttons of the class
-				modeButtons[a].classList.remove("selected"); //this adds to the complexity of the code, but the number of buttons will be limited, so this is not a huge problem
-			}
-		this.classList.add("selected");
-		this.textContent === "Easy" ? numSquares = 3: numSquares = 6; //ternary operator - is the same as an if else statement
-		reset();
-		});
-	}
+	setUpModeButtons(); //set listeners to the class "mode" buttons
 	//the below code sets up the square listeners
 	for(var i = 0; i < squares.length; i++){
 	squares[i].style.background = colors[i];
@@ -44,6 +35,19 @@ function init(){
 	});
 	}
 	reset();//reset function sets the color variables declared above
+}
+
+function setUpModeButtons(){
+	for(var i = 0; i < modeButtons.length; i++){  //this touches both of the easy and difficult "mode" buttons
+		modeButtons[i].addEventListener("click", function(){
+		for(var a = 0; a< modeButtons.length; a++){ //this loop will remove all classes add to any buttons of the class
+			modeButtons[a].classList.remove("selected"); //this adds to the complexity of the code, but the number of buttons will be limited, so this is not a huge problem
+		}
+		this.classList.add("selected");
+		this.textContent === "Easy" ? numSquares = 3: numSquares = 6; //ternary operator - is the same as an if else statement
+		reset();
+		});
+	}
 }
 
 function reset(){//sets the values of the color variables declared above
