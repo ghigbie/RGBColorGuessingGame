@@ -42,7 +42,6 @@ function init(){
 		}
 		//grab color of clicked square
 	});
-	colorDisplay.textContent = pickedColor;
 	}
 	reset();//reset function sets the color variables declared above
 }
