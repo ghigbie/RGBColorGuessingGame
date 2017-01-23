@@ -12,15 +12,39 @@ let hardButton = document.querySelector("#hard");
 let numSquares = 6;
 let modeButtons = document.querySelectorAll(".mode");
 
-for(var i = 0; i < modeButtons.length; i++){  //this touches both of the easy and difficult "mode" buttons
-	modeButtons[i].addEventListener("click", function(){
-		for(var a = 0; a< modeButtons.length; a++){ //this loop will remove all classes add to any buttons of the class
-			modeButtons[a].classList.remove("selected"); //this adds to the complexity of the code, but the number of buttons will be limited, so this is not a huge problem
+init();
+
+function init(){
+	for(var i = 0; i < modeButtons.length; i++){  //this touches both of the easy and difficult "mode" buttons
+		modeButtons[i].addEventListener("click", function(){
+			for(var a = 0; a< modeButtons.length; a++){ //this loop will remove all classes add to any buttons of the class
+				modeButtons[a].classList.remove("selected"); //this adds to the complexity of the code, but the number of buttons will be limited, so this is not a huge problem
+			}
+		this.classList.add("selected");
+		this.textContent === "Easy" ? numSquares = 3: numSquares = 6; //ternary operator - is the same as an if else statement
+		reset();
+		});
+	}
+
+	for(var i = 0; i < squares.length; i++){
+	squares[i].style.background = colors[i];
+	squares[i].addEventListener("click", function(){
+		var clickedColor = this.style.background;
+
+		if(clickedColor === pickedColor){
+			//alert(`Correct! You clicked on ${pickedColor}!`);
+			messageDisplay.textContent = "Correct! Awesome Eye!"
+			changeToWinningColor(clickedColor);
+			resetButton.textContent = "Play Again?"
+		}else{
+			//alert(`Try again. You clicked color ${clickedColor}`);
+			this.style.background = "#232323";
+			messageDisplay.textContent = "Try Again"; 
 		}
-	this.classList.add("selected");
-	this.textContent === "Easy" ? numSquares = 3: numSquares = 6; //ternary operator - is the same as an if else statement
-	reset();
+		//grab color of clicked square
 	});
+	colorDisplay.textContent = pickedColor;
+	}
 }
 
 function reset(){
@@ -47,26 +71,6 @@ resetButton.addEventListener("click", function(){
 	reset();
 });
 
-colorDisplay.textContent = pickedColor;
-
-for(var i = 0; i < squares.length; i++){
-	squares[i].style.background = colors[i];
-	squares[i].addEventListener("click", function(){
-		var clickedColor = this.style.background;
-
-		if(clickedColor === pickedColor){
-			//alert(`Correct! You clicked on ${pickedColor}!`);
-			messageDisplay.textContent = "Correct! Awesome Eye!"
-			changeToWinningColor(clickedColor);
-			resetButton.textContent = "Play Again?"
-		}else{
-			//alert(`Try again. You clicked color ${clickedColor}`);
-			this.style.background = "#232323";
-			messageDisplay.textContent = "Try Again"; 
-		}
-		//grab color of clicked square
-	});
-}
 
 function changeToWinningColor(color){
 	for(let a = 0; a < squares.length; a++){
