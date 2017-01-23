@@ -12,10 +12,10 @@ let hardButton = document.querySelector("#hard");
 let numSquares = 6;
 let modeButtons = document.querySelectorAll(".mode");
 
-for(var i = 0; i < modeButtons.length; i++){
+for(var i = 0; i < modeButtons.length; i++){  //this touches both of the easy and difficult "mode" buttons
 	modeButtons[i].addEventListener("click", function(){
 		for(var a = 0; a< modeButtons.length; a++){ //this loop will remove all classes add to any buttons of the class
-			modeButtons[a].classList.remove("selected");
+			modeButtons[a].classList.remove("selected"); //this adds to the complexity of the code, but the number of buttons will be limited, so this is not a huge problem
 		}
 	this.classList.add("selected");
 	this.textContent === "Easy" ? numSquares = 3: numSquares = 6; //ternary operator - is the same as an if else statement
@@ -42,51 +42,9 @@ function reset(){
 	resetButton.textContent = "New Colors";
 }
 
-// easyButton.addEventListener("click", function(){
-// 	numSquares = 3;
-// 	easyButton.classList.add("selected");
-// 	hardButton.classList.remove("selected")
-// 	colors = generateRandomColors(numSquares);
-// 	pickedColor = pickColor();
-// 	colorDisplay.textContent = pickedColor;
-// 	for(var i = 0; i < squares.length; i++){
-// 		if(colors[i]){ //if there is a next colors
-// 			squares[i].style.background = colors[i];
-// 		}else{
-// 			squares[i].style.display = "none";
-// 		}
-// 	}
-// 	messageDisplay.textContent = "";
-// });
-
-// hardButton.addEventListener("click", function(){
-// 	numSquares = 6;
-// 	hardButton.classList.add("selected");
-// 	easyButton.classList.remove("selected");
-// 	colors = generateRandomColors(numSquares);
-// 	pickedColor = pickColor();
-// 	colorDisplay.textContent = pickedColor;
-// 	for(var i = 0; i < squares.length; i++){
-// 		squares[i].style.background = colors[i];
-// 		squares[i].style.display = "block";
-// 	}
-// 	messageDisplay.textContent = "";
-// });
 
 resetButton.addEventListener("click", function(){
 	reset();
-	// //generate all new colors
-	// colors = generateRandomColors(numSquares);
-	// //pick a new random color from array
-	// pickedColor = pickColor();
-	// colorDisplay.textContent = pickedColor;
-	// //change color of squares
-	// for(var i = 0; i < squares.length; i++){
-	// 	squares[i].style.background = colors[i];
-	// }
-	// h1.style.background = "steelblue";
-	// messageDisplay.textContent = "";
-	// this.textContent = "New Colors";
 });
 
 colorDisplay.textContent = pickedColor;
