@@ -1,15 +1,14 @@
-
-var colors = generateRandomColors(6);
-
+let numSquares = 6;
+var colors = [];
+var pickedColor;
+//selector variables
 var squares = document.querySelectorAll(".square");
-var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.querySelector("#message");
 let h1 = document.querySelector("h1");
 let resetButton = document.querySelector("#reset");
 let easyButton = document.querySelector("#easy");
 let hardButton = document.querySelector("#hard");
-let numSquares = 6;
 let modeButtons = document.querySelectorAll(".mode");
 
 init();
@@ -45,6 +44,7 @@ function init(){
 	});
 	colorDisplay.textContent = pickedColor;
 	}
+	reset();
 }
 
 function reset(){
