@@ -10,10 +10,6 @@ body{
 	background: #0dc8e5;
 }
 
-.navbar{
-	color: #0dc8e5;
-	background: #ffffff;
-}
 
 #container{
 	max-width: 600px;
@@ -22,10 +18,10 @@ body{
 
 }
 
-.row{
+/*.row{
 	margin-right: auto;
 	margin-left: auto;
-}
+}*/
 
 h1 {
 	text-align: center;
